@@ -23,6 +23,9 @@ namespace E_book
         public MainWindow()
         {
             InitializeComponent();
+            AppFrame.frameMain = FrmMain;
+
+            FrmMain.Navigate(new PageBooks());
         }
     }
 }

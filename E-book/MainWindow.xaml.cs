@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using E_book.AppData;
+using E_book.Pages;
 
 namespace E_book
 {
@@ -23,6 +25,7 @@ namespace E_book
         public MainWindow()
         {
             InitializeComponent();
+            AppConnect.model0db = new Entities();
             AppFrame.frameMain = FrmMain;
 
             FrmMain.Navigate(new PageBooks());

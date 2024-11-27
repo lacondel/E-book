@@ -27,5 +27,13 @@ namespace E_book.AppData
         public virtual authors authors { get; set; }
         public virtual genres genres { get; set; }
         public virtual publishers publishers { get; set; }
+
+        public string AddGenre
+        {
+            get
+            {
+                return Services.GenreService.Genre(genres.id_g);
+            }
+        }
     }
 }

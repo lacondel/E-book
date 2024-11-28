@@ -10,19 +10,15 @@ namespace E_book.AppData.Services
     {
         public static string Image(int id)
         {
-            using (Entities2 context = new Entities2())
+            var book = AppConnect.model0db.books.FirstOrDefault(i => i.id_b == id);
+
+            if (book != null)
             {
-                var book = context.books.FirstOrDefault(i => i.id_b == id);
-
-                if (book != null)
-                {
-                    return book.b_photo;
-                }
-                else
-                {
-                    return "Изображение не найдено";
-                }
-
+                return book.b_photo;
+            }
+            else
+            {
+                return "Изображение не найдено";
             }
         }
     }

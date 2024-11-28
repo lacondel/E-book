@@ -10,19 +10,15 @@ namespace E_book.AppData.Services
     {
         public static string Author(int id)
         {
-            using (Entities2 context = new Entities2())
+            var author = AppConnect.model0db.authors.FirstOrDefault(a => a.id_a == id);
+
+            if (author != null)
             {
-                var author = context.authors.FirstOrDefault(a => a.id_a == id);
-
-                if (author != null)
-                {
-                    return author.a_name;
-                }
-                else
-                {
-                    return "Автор не найден";
-                }
-
+                return author.a_name;
+            }
+            else
+            {
+                return "Автор не найден";
             }
         }
     }

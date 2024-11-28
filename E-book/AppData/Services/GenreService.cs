@@ -7,27 +7,20 @@ namespace E_book.AppData.Services
     {
         public List<genres> GetAllGenres()
         {
-            using (Entities2 context = new Entities2())
-            {
-                return context.genres.ToList();
-            }
+            return AppConnect.model0db.genres.ToList();
         }
 
         public static string Genre(int id)
         {
-            using (Entities2 context = new Entities2())
+            var genre = AppConnect.model0db.genres.FirstOrDefault(g => g.id_g == id);
+
+            if (genre != null)
             {
-                var genre = context.genres.FirstOrDefault(g => g.id_g == id);
-
-                if (genre != null)
-                {
-                    return genre.g_name;
-                }
-                else
-                {
-                    return "Жанр не найден";
-                }
-
+                return genre.g_name;
+            }
+            else
+            {
+                return "Жанр не найден";
             }
         }
     }

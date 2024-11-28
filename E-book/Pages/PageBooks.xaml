@@ -15,15 +15,15 @@
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <TextBox x:Name="SearchBox" Width="150" Margin="5"/>
-            <ComboBox x:Name="SortBox" Width="150" Margin="5" SelectedIndex="0">
+            <TextBox x:Name="SearchBox" Width="150" Margin="5" TextChanged="SearchBox_TextChanged"/>
+            <ComboBox x:Name="SortBox" Width="150" Margin="5" SelectedIndex="0" SelectionChanged="SortBox_SelectionChanged">
                 <ComboBoxItem Content="Сортировка"/>
                 <ComboBoxItem Content="Название А-Я"/>
                 <ComboBoxItem Content="Название Я-А"/>
             </ComboBox>
-            <ComboBox x:Name="FilterBox" Width="150" Margin="5" SelectedIndex="23"/>
+            <ComboBox x:Name="FilterBox" Width="150" Margin="5" SelectedIndex="23" SelectionChanged="FilterBox_SelectionChanged"/>
         </StackPanel>
-        <ListView x:Name="ListBooks" Grid.Row="1" ScrollViewer.CanContentScroll="False">
+        <ListView x:Name="ListBooks" Grid.Row="1" ScrollViewer.CanContentScroll="False" SelectionChanged="ListBooks_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>

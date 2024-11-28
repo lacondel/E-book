@@ -110,16 +110,24 @@
     <Compile Include="AppData\Services\AuthorService.cs" />
     <Compile Include="AppData\Services\GenreService.cs" />
     <Compile Include="AppData\Services\ImageService.cs" />
+    <Compile Include="AppData\Services\PublisherService.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\PageAboutBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageBooks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\PageAboutBook.xaml.cs">
+      <DependentUpon>PageAboutBook.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageBooks.xaml.cs">
       <DependentUpon>PageBooks.xaml</DependentUpon>
     </Compile>

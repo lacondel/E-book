@@ -280,7 +280,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="authorAwards" EntityType="Self.authorAwards" />
           <EntitySet Name="authors" EntityType="Self.authors" />
           <EntitySet Name="awards" EntityType="Self.awards" />
@@ -313,7 +313,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Entities2">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Entities3">
           <EntitySetMapping Name="authorAwards">
             <EntityTypeMapping TypeName="Model.authorAwards">
               <MappingFragment StoreEntitySet="authorAwards">

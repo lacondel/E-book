@@ -37,6 +37,21 @@
                     <Run Text="Национальность:"/>
                     <Run Text="{Binding AuthorNationality}"/>
                     </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="3" FontWeight="Bold">
+                    <Run Text="Награды:"/>
+                    </TextBlock>
+                    <ItemsControl ItemsSource="{Binding AuthorAwards}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" Margin="5">
+                                    <TextBlock TextWrapping="Wrap">
+                                    <Run Text="Название:"/>
+                                    <Run Text="{Binding aw_name}"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                     <Button x:Name="btnBack" Content="Вернуться" Margin="3" Width="250" Height="30" Click="btnBack_Click"/>
                 </StackPanel>
             </Grid>

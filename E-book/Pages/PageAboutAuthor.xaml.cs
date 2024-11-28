@@ -54,15 +54,26 @@ namespace E_book.Pages
         public string AuthorBiography { get; set; }
         public string AuthorNationality { get; set; }
         public string AuthorPhoto { get; set; }
+        public List<awards> AuthorAwards { get; set; }
 
         public AuthorInformation(authors selectedAuthor)
         {
             AuthorName = selectedAuthor.a_name;
-            AuthorDOB = (DateTime)selectedAuthor.dob;
-            AuthorDOD = selectedAuthor.dod.HasValue ? (DateTime?)selectedAuthor.dod : null;
+            AuthorDOB = selectedAuthor.dob.HasValue ? selectedAuthor.dob.Value : DateTime.MinValue;
+            AuthorDOD = selectedAuthor.dod.HasValue ? (DateTime?)selectedAuthor.dod.Value : null;
             AuthorBiography = selectedAuthor.biography;
             AuthorNationality = selectedAuthor.nationality;
             AuthorPhoto = selectedAuthor.a_photo;
+            AuthorAwards = GetAuthorAwards(selectedAuthor.id_a);
+        }
+
+        private List<awards> GetAuthorAwards(int authorId)
+        {
+            var awards = AppConnect.model0db.authorAwards
+                .Where(aa => aa.id_a == authorId)
+                .Select(aa => aa.awards)
+                .ToList();
+            return awards;
         }
     }
 }

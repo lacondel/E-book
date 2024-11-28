@@ -22,10 +22,31 @@ namespace E_book.Pages
     /// </summary>
     public partial class PageAboutBook : Page
     {
+        private readonly books _selectedBook;
+
         public PageAboutBook(books selectedBook)
         {
             InitializeComponent();
+            _selectedBook = selectedBook;
             DataContext = new BookInformation(selectedBook);
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (AppFrame.frameMain.CanGoBack)
+            {
+                AppFrame.frameMain.GoBack();
+            }
+        }
+
+        private void AuthorName_Click(object sender, MouseButtonEventArgs e)
+        {
+            var authorID = _selectedBook.id_a;
+            var author = AppConnect.model0db.authors.FirstOrDefault(a => a.id_a == authorID);
+            if (author != null)
+            {
+                AppFrame.frameMain.Navigate(new PageAboutAuthor(author));
+            }
         }
     }
 

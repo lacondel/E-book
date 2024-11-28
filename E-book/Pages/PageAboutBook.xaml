@@ -8,34 +8,44 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="About Book">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Image Source="{Binding BookImage}" Grid.Row="0"/>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
-            <TextBlock TextWrapping="Wrap">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Source="{Binding BookImage}" Grid.Row="0"/>
+            <StackPanel Orientation="Vertical" Margin="10" Grid.Row="1">
+                <TextBlock TextWrapping="Wrap" Margin="3">
+                <Run Text="Название:"/>
                 <Run Text="{Binding BookTitle}"/>
-            </TextBlock>
-            <TextBlock TextWrapping="Wrap">
+                </TextBlock>
+                <TextBlock x:Name="AuthorName" TextWrapping="Wrap" Margin="3" Foreground="Blue" MouseLeftButtonUp="AuthorName_Click">
+                <Run Text="Автор:"/>
                 <Run Text="{Binding BookAuthor}"/>
-            </TextBlock>
-            <TextBlock TextWrapping="Wrap">
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" Margin="3">
+                <Run Text="Жанр:"/>
                 <Run Text="{Binding BookGenre}"/>
-            </TextBlock>
-            <TextBlock TextWrapping="Wrap">
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" Margin="3">
+                <Run Text="ISBN:"/>
                 <Run Text="{Binding BookISBN}"/>
-            </TextBlock>
-            <TextBlock TextWrapping="Wrap">
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" Margin="3">
+                <Run Text="Год издания:"/>
                 <Run Text="{Binding BookPublishYear}"/>
-            </TextBlock>
-            <TextBlock TextWrapping="Wrap">
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" Margin="3">
+                <Run Text="Издатель:"/>
                 <Run Text="{Binding BookPublisher}"/>
-            </TextBlock>
-            <TextBlock TextWrapping="Wrap">
+                </TextBlock>
+                <TextBlock TextWrapping="Wrap" Margin="3">
+                <Run Text="Описание:"/>
                 <Run Text="{Binding BookDescription}"/>
-            </TextBlock>
-        </StackPanel>
-    </Grid>
+                </TextBlock>
+                <Button x:Name="btnBack" Content="Вернуться" Margin="3" Width="250" Height="30" Click="btnBack_Click"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
 </Page>

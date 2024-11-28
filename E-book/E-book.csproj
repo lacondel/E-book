@@ -109,7 +109,6 @@
     </Compile>
     <Compile Include="AppData\Services\AuthorService.cs" />
     <Compile Include="AppData\Services\GenreService.cs" />
-    <Compile Include="AppData\Services\ImageService.cs" />
     <Compile Include="AppData\Services\PublisherService.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

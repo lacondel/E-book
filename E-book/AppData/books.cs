@@ -42,11 +42,11 @@ namespace E_book.AppData
                 return Services.AuthorService.Author(authors.id_a);
             }
         }
-        public string BookImage
+        public string BookPublisher
         {
             get
             {
-                return Services.AuthorService.Author(authors.id_a);
+                return Services.PublisherService.Publisher(publishers.id_p);
             }
         }
     }

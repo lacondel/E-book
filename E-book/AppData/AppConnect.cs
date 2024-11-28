@@ -8,6 +8,6 @@ namespace E_book.AppData
 {
     internal class AppConnect
     {
-        public static Entities model0db;
+        public static Entities2 model0db;
     }
 }

@@ -25,7 +25,7 @@ namespace E_book
         public MainWindow()
         {
             InitializeComponent();
-            AppConnect.model0db = new Entities();
+            AppConnect.model0db = new Entities2();
             AppFrame.frameMain = FrmMain;
 
             FrmMain.Navigate(new PageBooks());

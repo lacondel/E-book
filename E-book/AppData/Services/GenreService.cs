@@ -7,7 +7,7 @@ namespace E_book.AppData.Services
     {
         public List<genres> GetAllGenres()
         {
-            using (Entities context = new Entities())
+            using (Entities2 context = new Entities2())
             {
                 return context.genres.ToList();
             }
@@ -15,7 +15,7 @@ namespace E_book.AppData.Services
 
         public static string Genre(int id)
         {
-            using (Entities context = new Entities())
+            using (Entities2 context = new Entities2())
             {
                 var genre = context.genres.FirstOrDefault(g => g.id_g == id);
 

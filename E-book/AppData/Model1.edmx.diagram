@@ -4,14 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="72a4e56259eb4902978d49e9b5c406b7" Name="Diagram1">
+      <Diagram DiagramId="92f85635371f44118ddfa105d917f865" Name="Diagram1">
         <EntityTypeShape EntityType="Model.authorAwards" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.authors" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.awards" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.books" Width="1.5" PointX="6" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.genres" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.publishers" Width="1.5" PointX="3.75" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
         <AssociationConnector Association="Model.FK_authorAwards_authors" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_authorAwards_awards" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_books_authors" ManuallyRouted="false" />

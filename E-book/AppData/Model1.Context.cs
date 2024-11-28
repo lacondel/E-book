@@ -13,10 +13,10 @@ namespace E_book.AppData
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class Entities2 : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public Entities2()
+            : base("name=Entities2")
         {
         }
     
@@ -31,6 +31,5 @@ namespace E_book.AppData
         public virtual DbSet<books> books { get; set; }
         public virtual DbSet<genres> genres { get; set; }
         public virtual DbSet<publishers> publishers { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

@@ -31,5 +31,8 @@ namespace E_book.AppData
         public virtual DbSet<books> books { get; set; }
         public virtual DbSet<genres> genres { get; set; }
         public virtual DbSet<publishers> publishers { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<u_roles> u_roles { get; set; }
+        public virtual DbSet<users> users { get; set; }
     }
 }

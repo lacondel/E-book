@@ -16,6 +16,10 @@
         <AssociationConnector Association="Model.FK_books_authors" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_books_genres" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_books_publishers" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Model.u_roles" Width="1.5" PointX="6.75" PointY="8.125" />
+        <EntityTypeShape EntityType="Model.users" Width="1.5" PointX="9" PointY="7.875" />
+        <AssociationConnector Association="Model.FK_users_u_roles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

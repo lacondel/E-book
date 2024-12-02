@@ -27,7 +27,7 @@ namespace E_book.AppData
         public virtual authors authors { get; set; }
         public virtual genres genres { get; set; }
         public virtual publishers publishers { get; set; }
-
+        
         public string BookGenre
         {
             get

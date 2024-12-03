@@ -1,0 +1,33 @@
+﻿<Page x:Class="E_book.Pages.PageRegistration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:E_book.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Registration">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="Введите логин:"/>
+            <TextBox x:Name="tbRegLog" Width="200"/>
+            <Label Content="Введите пароль:"/>
+            <PasswordBox x:Name="pbRegPass" Width="200"/>
+            <Label Content="Повторите пароль:"/>
+            <PasswordBox x:Name="pbRegPassConf" Width="200"/>
+            <Button x:Name="btnReg" Content="Зарегистрироваться" Margin="0 10 0 0" Click="btnReg_Click"/>
+            <Popup x:Name="popRegLog" PlacementTarget="{Binding ElementName=btnReg}" Placement="Mouse" VerticalOffset="-70" IsOpen="False">
+                <Border Background="White" BorderBrush="Black" BorderThickness="1" Padding="10">
+                    <TextBlock Text="Вы не ввели логин, либо данный логин уже существует!"/>
+                </Border>
+            </Popup>
+            <Popup x:Name="popRegPass" PlacementTarget="{Binding ElementName=btnReg}" Placement="Mouse" VerticalOffset="-70" IsOpen="False">
+                <Border Background="White" BorderBrush="Black" BorderThickness="1" Padding="10">
+                    <TextBlock Text="Пароли не совпадают, либо поля не заполнены!"/>
+                </Border>
+            </Popup>
+            <Button x:Name="btnBack" Content="Вернуться" Margin="0 5 0 0" Click="btnBack_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

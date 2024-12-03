@@ -15,7 +15,7 @@ namespace E_book
             AppConnect.model0db = new Entities3();
             AppFrame.frameMain = FrmMain;
 
-            FrmMain.Navigate(new PageBooks());
+            FrmMain.Navigate(new PageAuthorization());
         }
     }
 }

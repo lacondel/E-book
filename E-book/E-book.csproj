@@ -139,6 +139,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\PageAboutAuthor.xaml.cs">
@@ -152,6 +156,9 @@
     </Compile>
     <Compile Include="Pages\PageBooks.xaml.cs">
       <DependentUpon>PageBooks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageRegistration.xaml.cs">
+      <DependentUpon>PageRegistration.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

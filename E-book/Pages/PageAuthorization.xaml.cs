@@ -46,12 +46,18 @@ namespace E_book.Pages
                             MessageBox.Show("Добро пожаловать в панель администратора", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                             break;
                     }
+                    AppFrame.frameMain.Navigate(new PageBooks());
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ошибка " + ex.Message.ToString() + "Критическая работа приложения!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void btnMoveReg_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.frameMain.Navigate(new PageRegistration());
         }
     }
 }
